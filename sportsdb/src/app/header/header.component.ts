@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
-import { SearchStorageService } from '../services/search-storage.service';
+import { NavigationService } from '../services/navigation.service';
 
 @Component({
   selector: 'app-header',
@@ -12,7 +12,7 @@ export class HeaderComponent implements OnInit {
   menuOpened: boolean = false;
   currentUrl: string = '';
 
-  constructor(private router: Router, private searchStorageService: SearchStorageService) {
+  constructor(private router: Router, private navigationService: NavigationService) {
     router.events.subscribe((val) => {
       if (val instanceof NavigationEnd) {
         this.currentUrl = this.router.url;
@@ -25,9 +25,7 @@ export class HeaderComponent implements OnInit {
   }
 
   goToRoute(route: string) {
-    this.searchStorageService.searchText = '';
-    this.searchStorageService.searchResults = undefined;
-    this.router.navigate(['/' + route]);
+    this.navigationService.goToRoute(route);
   }
 
   menuButtonClicked() {

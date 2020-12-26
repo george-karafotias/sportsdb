@@ -20,6 +20,7 @@ import { TeamsComponent } from './teams/teams.component';
 import { TeamsListComponent } from './teams-list/teams-list.component';
 import { TeamComponent } from './team/team.component';
 import { TeamInfoComponent } from './team-info/team-info.component';
+import { ImageButtonComponent } from './image-button/image-button.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -46,7 +47,8 @@ const routes: Routes = [
     TeamsComponent,
     TeamsListComponent,
     TeamComponent,
-    TeamInfoComponent
+    TeamInfoComponent,
+    ImageButtonComponent
   ],
   imports: [
     BrowserModule,

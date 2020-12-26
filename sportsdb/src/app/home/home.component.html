@@ -1,1 +1,12 @@
 <h2>Welcome to our Sports Catalog!</h2>
+
+<div class="image-buttons-container">
+
+    <app-image-button id="players" text="Players" image="assets/players.jpg"
+        (imageButtonPressed)="buttonPressed($event)">
+    </app-image-button>
+
+    <app-image-button id="teams" text="Teams" image="assets/teams.png" (imageButtonPressed)="buttonPressed($event)">
+    </app-image-button>
+
+</div>
