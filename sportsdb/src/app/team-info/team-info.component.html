@@ -21,7 +21,7 @@
     <tr>
       <td>Stadium: {{team.strStadium}}</td>
     </tr>
-    <tr>
+    <tr *ngIf="team.strWebsite">
       <td><a [attr.href]="'http://' + team.strWebsite" target="_blank">Website</a></td>
     </tr>
   </table>
