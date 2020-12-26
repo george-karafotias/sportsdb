@@ -35,7 +35,7 @@ div.two-col-container>* {
   margin-bottom: 20px;
 }
 
-.two-col-header {
+div.two-col-header {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
@@ -44,6 +44,8 @@ div.two-col-container>* {
 
 .two-col-image {
   width: 300px;
+  margin-bottom: 20px;
+  margin-right: 20px;
 }
 
 .two-col-image img {
