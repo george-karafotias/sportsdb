@@ -1,0 +1,31 @@
+<div *ngIf="team" class="two-col-container">
+
+  <h2>{{team.strTeam}}</h2>
+
+  <div *ngIf="team.strTeamBadge" class="two-col-header">
+
+    <div class="two-col-image">
+      <img src='{{team.strTeamBadge}}'>
+    </div>
+
+    <div class="two-col-info">
+      <app-team-info [team]="team"></app-team-info>
+    </div>
+
+  </div>
+
+  <div *ngIf="!team.strTeamBadge">
+    <app-team-info [team]="team"></app-team-info>
+  </div>
+
+  <div class="team-body">
+    {{team.strDescriptionEN}}
+  </div>
+
+</div>
+
+<app-please-wait *ngIf="callInProgress"></app-please-wait>
+
+<div *ngIf="!callInProgress">
+  <app-error-message [message]="errorMessage"></app-error-message>
+</div>

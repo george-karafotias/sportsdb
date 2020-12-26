@@ -1,0 +1,28 @@
+<div *ngIf="team">
+  <table style="overflow-x:auto;">
+    <tr>
+      <td>Team: {{team.strTeam}}</td>
+    </tr>
+    <tr>
+      <td>Formed Year: {{team.intFormedYear}}</td>
+    </tr>
+    <tr>
+      <td>Sport: {{team.strSport}}</td>
+    </tr>
+    <tr>
+      <td>Country: {{team.strCountry}}</td>
+    </tr>
+    <tr>
+      <td>Gender: {{team.strGender}}</td>
+    </tr>
+    <tr>
+      <td>League: {{team.strLeague}}</td>
+    </tr>
+    <tr>
+      <td>Stadium: {{team.strStadium}}</td>
+    </tr>
+    <tr>
+      <td><a [attr.href]="'http://' + team.strWebsite" target="_blank">Website</a></td>
+    </tr>
+  </table>
+</div>

@@ -1,0 +1,32 @@
+<div *ngIf="teams" style="overflow-x:auto;">
+
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Formed Year</th>
+        <th>Sport</th>
+        <th>Country</th>
+        <th>Gender</th>
+        <th>League</th>
+        <th>Website</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let team of teams">
+        <td>{{team.strTeam}}</td>
+        <td>{{team.intFormedYear}}</td>
+        <td>{{team.strSport}}</td>
+        <td>{{team.strCountry}}</td>
+        <td>{{team.strGender}}</td>
+        <td>{{team.strLeague}}</td>
+        <td><a [attr.href]="'http://' + team.strWebsite" target="_blank">Website</a></td>
+        <td><a routerLink="/team/{{team.idTeam}}">View</a></td>
+      </tr>
+    </tbody>
+
+  </table>
+
+
+</div>

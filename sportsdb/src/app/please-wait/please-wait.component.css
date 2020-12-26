@@ -1,0 +1,81 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.wait {
+    width: 60%;
+    margin: 100px auto;
+    text-align: center;
+    text-transform: Capitalize;
+    position: relative;
+    color: #beb;
+    animation: glowtext .8s linear infinite alternate;
+    padding: 2px;
+}
+
+@keyframes glowtext {
+    0% {
+        color: #393;
+    }
+    50% {
+        color: #6f6;
+    }
+    100% {
+        color: #393;
+    }
+}
+
+.wait:before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #0B0B0B;
+    animation: glow .4s linear infinite alternate;
+}
+
+@keyframes glow {
+    0% {
+        border-color: #393;
+        box-shadow: 0 0 5px rgba(0, 255, 0, .2), inset 0 0 5px rgba(0, 255, 0, .1), 0 2px 0 #000;
+    }
+    100% {
+        border-color: #6f6;
+        box-shadow: 0 0 15px rgba(0, 255, 0, .6), inset 0 0 10px rgba(0, 255, 0, .4), 0 2px 0 #000;
+    }
+}
+
+.wait:after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 10%;
+    height: 3px;
+    background-color: #6f6;
+    animation: progress linear .8s infinite/* alternate */
+    ;
+}
+
+@keyframes progress {
+    0% {
+        left: 0;
+        width: 0;
+        right: 100%
+    }
+    50% {
+        left: 0;
+        width: 100%;
+        right: 0
+    }
+    100% {
+        left: 100%;
+        width: 0;
+        right: 0
+    }
+}

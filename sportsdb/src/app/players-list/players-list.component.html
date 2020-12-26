@@ -1,0 +1,26 @@
+<div *ngIf="players" style="overflow-x:auto;">
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Sport</th>
+        <th>Date of Birth</th>
+        <th>Nationality</th>
+        <th>Position</th>
+        <th>Team</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let player of players">
+        <td>{{player.strPlayer}}</td>
+        <td>{{player.strSport}}</td>
+        <td>{{player.dateBorn}}</td>
+        <td>{{player.strNationality}}</td>
+        <td>{{player.strPosition}}</td>
+        <td>{{player.strTeam}}</td>
+        <td><a routerLink="/player/{{player.idPlayer}}">View</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

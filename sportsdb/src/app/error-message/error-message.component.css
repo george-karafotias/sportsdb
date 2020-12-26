@@ -1,0 +1,5 @@
+div.errorMessage {
+    display: flex;
+    color: red;
+    padding: 15px;
+}

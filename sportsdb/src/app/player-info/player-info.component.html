@@ -1,0 +1,40 @@
+<div *ngIf="player">
+  <table style="overflow-x:auto;">
+    <tr>
+      <td>Name: {{player.strPlayer}}</td>
+    </tr>
+    <tr>
+      <td>Gender: {{player.strGender}}</td>
+    </tr>
+    <tr>
+      <td>Sport: {{player.strSport}}</td>
+    </tr>
+    <tr>
+      <td>Position: {{player.strPosition}}</td>
+    </tr>
+    <tr>
+      <td>Team: {{player.strTeam}}</td>
+    </tr>
+    <tr>
+      <td>Nationality: {{player.strNationality}}</td>
+    </tr>
+    <tr>
+      <td>Date of birth: {{player.dateBorn}}</td>
+    </tr>
+    <tr *ngIf="player.strWeight">
+      <td>Weight: {{player.strWeight}}</td>
+    </tr>
+    <tr *ngIf="player.strHeight">
+      <td>Height: {{player.strHeight}}</td>
+    </tr>
+    <tr *ngIf="player.strFacebook">
+      <td><a [attr.href]="'http://' + player.strFacebook" target="_blank">Facebook</a></td>
+    </tr>
+    <tr *ngIf="player.strTwitter">
+      <td><a [attr.href]="'http://' + player.strTwitter" target="_blank">Twitter</a></td>
+    </tr>
+    <tr *ngIf="player.strInstragram">
+      <td><a [attr.href]="'http://' + player.strInstragram" target="_blank">Instagram</a></td>
+    </tr>
+  </table>
+</div>

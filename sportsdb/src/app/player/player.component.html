@@ -1,0 +1,31 @@
+<div *ngIf="player" class="two-col-container">
+
+  <h2>{{player.strPlayer}}</h2>
+
+  <div *ngIf="player.strThumb" class="two-col-header">
+
+    <div class="two-col-image">
+      <img src='{{player.strThumb}}'>
+    </div>
+
+    <div class="two-col-info">
+      <app-player-info [player]="player"></app-player-info>
+    </div>
+
+  </div>
+
+  <div *ngIf="!player.strThumb">
+    <app-player-info [player]="player"></app-player-info>
+  </div>
+
+  <div class="player-body">
+    {{player.strDescriptionEN}}
+  </div>
+
+</div>
+
+<app-please-wait *ngIf="callInProgress"></app-please-wait>
+
+<div *ngIf="!callInProgress">
+  <app-error-message [message]="errorMessage"></app-error-message>
+</div>

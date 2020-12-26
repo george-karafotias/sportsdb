@@ -1,0 +1,17 @@
+<h2>Search for teams</h2>
+
+<div class="search-results" *ngIf="!callInProgress">
+
+  <app-search-bar [initialValue]="searchText" (searchButtonPressed)="getTeams($event)"></app-search-bar>
+
+  <app-teams-list [teams]="teams"></app-teams-list>
+
+  <div *ngIf="!teams && callCompleted">
+    <app-error-message message="No results"></app-error-message>
+  </div>
+
+</div>
+
+<app-please-wait *ngIf="callInProgress"></app-please-wait>
+
+<app-error-message [message]="errorMessage"></app-error-message>
