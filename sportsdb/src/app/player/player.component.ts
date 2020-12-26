@@ -22,6 +22,7 @@ export class PlayerComponent implements OnInit {
   }
 
   getPlayer(playerId: string) {
+    this.errorMessage = '';
     this.callInProgress = true;
 
     this.playersService.getPlayer(playerId)

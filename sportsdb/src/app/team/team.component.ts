@@ -22,6 +22,7 @@ export class TeamComponent implements OnInit {
   }
 
   getTeam(teamId: string) {
+    this.errorMessage = '';
     this.callInProgress = true;
 
     this.teamService.getTeam(teamId)
