@@ -3,10 +3,9 @@
   <div class="logo">Sports Catalog</div>
 
   <div class="topnav" style="flex: 1" [ngClass]="{'responsive': menuOpened}" id="myTopnav">
-    <a [ngClass]="{'active': currentUrl == '/home' || currentUrl == '/'}" [routerLink]=""
-      (click)="goToRoute('home')">Home</a>
-    <a [ngClass]="{'active': currentUrl == '/players'}" [routerLink]="" (click)="goToRoute('players')">Players</a>
-    <a [ngClass]="{'active': currentUrl == '/teams'}" [routerLink]="" (click)="goToRoute('teams')">Teams</a>
+    <a [routerLink]="" (click)="goToRoute('home')">Home</a>
+    <a [routerLink]="" (click)="goToRoute('players')">Players</a>
+    <a [routerLink]="" (click)="goToRoute('teams')">Teams</a>
     <a href="javascript:void(0);" style="font-size:15px;" class="icon" (click)="menuButtonClicked()">&#9776;</a>
   </div>
 
