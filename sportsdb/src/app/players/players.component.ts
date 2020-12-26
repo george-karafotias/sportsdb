@@ -23,6 +23,7 @@ export class PlayersComponent implements OnInit {
   }
 
   getPlayers(playerName: string) {
+    this.errorMessage = '';
     this.callInProgress = true;
     this.callCompleted = false;
     this.searchStorageService.searchText = playerName;

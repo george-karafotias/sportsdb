@@ -23,6 +23,7 @@ export class TeamsComponent implements OnInit {
   }
 
   getTeams(teamName: string) {
+    this.errorMessage = '';
     this.callInProgress = true;
     this.callCompleted = false;
     this.searchStorageService.searchText = teamName;
