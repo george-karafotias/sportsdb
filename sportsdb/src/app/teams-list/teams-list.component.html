@@ -21,7 +21,8 @@
         <td>{{team.strCountry}}</td>
         <td>{{team.strGender}}</td>
         <td>{{team.strLeague}}</td>
-        <td><a [attr.href]="'http://' + team.strWebsite" target="_blank">Website</a></td>
+        <td *ngIf="team.strWebsite"><a [attr.href]="'http://' + team.strWebsite" target="_blank">Website</a></td>
+        <td *ngIf="!team.strWebsite"></td>
         <td><a routerLink="/team/{{team.idTeam}}">View</a></td>
       </tr>
     </tbody>
