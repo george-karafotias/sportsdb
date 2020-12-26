@@ -31,40 +31,22 @@ div.two-col-container {
   flex-direction: column;
 }
 
+div.two-col-container>* {
+  margin: 20px;
+}
+
 .two-col-header {
   display: -ms-flexbox;
-  /* IE10 */
   display: flex;
   -ms-flex-wrap: wrap;
-  /* IE10 */
   flex-wrap: wrap;
 }
 
 .two-col-image {
-  -ms-flex: 50%;
-  /* IE10 */
-  flex: 50%;
-  max-width: 50%;
+  width: 300px;
 }
 
 .two-col-image img {
   vertical-align: middle;
   width: 100%;
-}
-
-.two-col-info {
-  -ms-flex: 50%;
-  /* IE10 */
-  flex: 50%;
-  max-width: 50%;
-}
-
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-
-@media screen and (max-width: 600px) {
-  .two-col-image, .two-col-info {
-    -ms-flex: 100%;
-    flex: 100%;
-    max-width: 100%;
-  }
 }
