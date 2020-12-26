@@ -32,7 +32,7 @@ div.two-col-container {
 }
 
 div.two-col-container>* {
-  margin: 20px;
+  margin-bottom: 20px;
 }
 
 .two-col-header {
