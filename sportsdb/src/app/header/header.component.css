@@ -120,3 +120,11 @@
         text-align: left;
     }
 }
+
+div.breadcrumb {
+    margin-top: 10px;
+}
+
+div.breadcrumb>span {
+    text-decoration: underline;
+}

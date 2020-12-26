@@ -25,6 +25,9 @@ export class HeaderComponent implements OnInit {
   }
 
   goToRoute(route: string) {
+    if (this.menuOpened) {
+      this.menuOpened = false;
+    }
     this.navigationService.goToRoute(route);
   }
 
