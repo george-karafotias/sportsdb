@@ -44,5 +44,4 @@ export class TeamsComponent implements OnInit {
         }
       })
   }
-
 }

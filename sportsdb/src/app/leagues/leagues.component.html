@@ -1,0 +1,15 @@
+<h2>Leagues</h2>
+
+<div *ngIf="!callInProgress">
+
+  <app-leagues-list [leagues]="leagues"></app-leagues-list>
+
+  <div *ngIf="!Leagues && callCompleted">
+    <app-error-message message="No results"></app-error-message>
+  </div>
+
+</div>
+
+<app-please-wait *ngIf="callInProgress"></app-please-wait>
+
+<app-error-message [message]="errorMessage"></app-error-message>

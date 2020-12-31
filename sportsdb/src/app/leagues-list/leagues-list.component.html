@@ -1,0 +1,18 @@
+<div *ngIf="leagues" style="overflow-x:auto;">
+
+  <table>
+    <thead>
+      <tr>
+        <th>League</th>
+        <th>Sport</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let league of leagues">
+        <td>{{league.strLeague}}</td>
+        <td>{{league.strSport}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>

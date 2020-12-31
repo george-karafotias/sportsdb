@@ -23,6 +23,8 @@ import { TeamInfoComponent } from './team-info/team-info.component';
 import { ImageButtonComponent } from './image-button/image-button.component';
 import { TeamStadiumComponent } from './team-stadium/team-stadium.component';
 import { TeamSocialMediaComponent } from './team-social-media/team-social-media.component';
+import { LeaguesComponent } from './leagues/leagues.component';
+import { LeaguesListComponent } from './leagues-list/leagues-list.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -30,6 +32,7 @@ const routes: Routes = [
   { path: 'player/:id', component: PlayerComponent },
   { path: 'teams', component: TeamsComponent },
   { path: 'team/:id', component: TeamComponent },
+  { path: 'leagues', component: LeaguesComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
 ]
 
@@ -52,7 +55,9 @@ const routes: Routes = [
     TeamInfoComponent,
     ImageButtonComponent,
     TeamStadiumComponent,
-    TeamSocialMediaComponent
+    TeamSocialMediaComponent,
+    LeaguesComponent,
+    LeaguesListComponent
   ],
   imports: [
     BrowserModule,
