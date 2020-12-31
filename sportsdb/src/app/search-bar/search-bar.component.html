@@ -1,7 +1,7 @@
 <div class="search">
   <form class="search-form">
-    <input type="text" autofocus placeholder="Enter at least 3 characters and hit the button.." [value]="searchText"
-      (input)="searchText = $event.target.value">
+    <input type="text" autofocus placeholder="Enter at least 3 characters and hit enter or the submit button.."
+      [value]="searchText" (input)="searchText = $event.target.value" (keyup.enter)="search()">
     <input type="button" value="Submit" (click)="search()">
   </form>
 </div>
