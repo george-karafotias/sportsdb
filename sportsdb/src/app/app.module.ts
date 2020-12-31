@@ -22,6 +22,7 @@ import { TeamComponent } from './team/team.component';
 import { TeamInfoComponent } from './team-info/team-info.component';
 import { ImageButtonComponent } from './image-button/image-button.component';
 import { TeamStadiumComponent } from './team-stadium/team-stadium.component';
+import { TeamSocialMediaComponent } from './team-social-media/team-social-media.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -50,7 +51,8 @@ const routes: Routes = [
     TeamComponent,
     TeamInfoComponent,
     ImageButtonComponent,
-    TeamStadiumComponent
+    TeamStadiumComponent,
+    TeamSocialMediaComponent
   ],
   imports: [
     BrowserModule,
