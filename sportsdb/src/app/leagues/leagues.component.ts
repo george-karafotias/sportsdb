@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SearchStorageService } from '../services/search-storage.service';
 import { LeaguesService } from './leagues.service';
 
 @Component({
@@ -15,9 +16,10 @@ export class LeaguesComponent implements OnInit {
   callInProgress: boolean = false;
   callCompleted: boolean = false;
 
-  constructor(private leaguesService: LeaguesService) { }
+  constructor(private leaguesService: LeaguesService, private searchStorageService: SearchStorageService) { }
 
   ngOnInit() {
+    this.searchText = this.searchStorageService.searchText;
     this.getLeagues();
   }
 
@@ -25,6 +27,7 @@ export class LeaguesComponent implements OnInit {
     this.errorMessage = '';
     this.callInProgress = true;
     this.callCompleted = false;
+    this.searchStorageService.searchText = this.searchText;
 
     this.leaguesService.getLeagues()
       .subscribe({
@@ -43,6 +46,7 @@ export class LeaguesComponent implements OnInit {
 
   filter(str: string) {
     this.searchText = str;
+    this.searchStorageService.searchText = this.searchText;
   }
 
 }

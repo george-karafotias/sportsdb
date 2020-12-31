@@ -26,6 +26,7 @@ import { TeamSocialMediaComponent } from './team-social-media/team-social-media.
 import { LeaguesComponent } from './leagues/leagues.component';
 import { LeaguesListComponent } from './leagues-list/leagues-list.component';
 import { TableFilterPipe } from './filters/table-filter.pipe';
+import { LeagueTeamsComponent } from './league-teams/league-teams.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -34,6 +35,7 @@ const routes: Routes = [
   { path: 'teams', component: TeamsComponent },
   { path: 'team/:id', component: TeamComponent },
   { path: 'leagues', component: LeaguesComponent },
+  { path: 'league-teams/:id/:name', component: LeagueTeamsComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
 ]
 
@@ -59,7 +61,8 @@ const routes: Routes = [
     TeamSocialMediaComponent,
     LeaguesComponent,
     LeaguesListComponent,
-    TableFilterPipe
+    TableFilterPipe,
+    LeagueTeamsComponent
   ],
   imports: [
     BrowserModule,
