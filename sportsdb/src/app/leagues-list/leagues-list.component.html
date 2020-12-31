@@ -12,7 +12,7 @@
       <tr *ngFor="let league of leagues | tableFilter:searchText:'strLeague'">
         <td>{{league.strLeague}}</td>
         <td>{{league.strSport}}</td>
-        <td><a routerLink="/league-teams/{{league.idLeague}}/{{league.strLeague}}">View</a></td>
+        <td><a routerLink="/league-teams/{{league.idLeague}}/{{league.strLeague}}">View Teams</a></td>
       </tr>
     </tbody>
   </table>
