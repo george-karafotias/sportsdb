@@ -8,6 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class LeaguesListComponent implements OnInit {
 
   @Input() leagues: any[];
+  @Input() searchText: string;
 
   constructor() { }
 

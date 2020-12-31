@@ -10,7 +10,10 @@ export class SearchBarComponent implements OnInit {
   searchText: string = '';
 
   @Input() initialValue: string = '';
+  @Input() placeHolder: string = 'Enter at least 3 characters and hit enter or the submit button..';
+  @Input() autoCompleteMode: boolean = false;
 
+  @Output() inputUpdated: EventEmitter<string> = new EventEmitter();
   @Output() searchButtonPressed: EventEmitter<string> = new EventEmitter();
 
   constructor() { }
@@ -20,8 +23,16 @@ export class SearchBarComponent implements OnInit {
   }
 
   search() {
-    if (this.searchText.length >= 3) {
-      this.searchButtonPressed.emit(this.searchText);
+    if (!this.autoCompleteMode) {
+      if (this.searchText.length >= 3) {
+        this.searchButtonPressed.emit(this.searchText);
+      }
+    }
+  }
+
+  filter() {
+    if (this.autoCompleteMode) {
+      this.inputUpdated.emit(this.searchText);
     }
   }
 

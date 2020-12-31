@@ -25,6 +25,7 @@ import { TeamStadiumComponent } from './team-stadium/team-stadium.component';
 import { TeamSocialMediaComponent } from './team-social-media/team-social-media.component';
 import { LeaguesComponent } from './leagues/leagues.component';
 import { LeaguesListComponent } from './leagues-list/leagues-list.component';
+import { TableFilterPipe } from './filters/table-filter.pipe';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -57,7 +58,8 @@ const routes: Routes = [
     TeamStadiumComponent,
     TeamSocialMediaComponent,
     LeaguesComponent,
-    LeaguesListComponent
+    LeaguesListComponent,
+    TableFilterPipe
   ],
   imports: [
     BrowserModule,

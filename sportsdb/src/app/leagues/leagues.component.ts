@@ -9,6 +9,8 @@ import { LeaguesService } from './leagues.service';
 export class LeaguesComponent implements OnInit {
 
   leagues: any[] = undefined;
+  searchText: string = '';
+  autoCompleteMode: boolean = true;
   errorMessage: string = '';
   callInProgress: boolean = false;
   callCompleted: boolean = false;
@@ -38,4 +40,9 @@ export class LeaguesComponent implements OnInit {
         }
       })
   }
+
+  filter(str: string) {
+    this.searchText = str;
+  }
+
 }

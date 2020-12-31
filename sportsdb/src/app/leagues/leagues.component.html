@@ -2,7 +2,11 @@
 
 <div *ngIf="!callInProgress">
 
-  <app-leagues-list [leagues]="leagues"></app-leagues-list>
+  <app-search-bar [initialValue]="searchText" placeHolder="Filter by league name..."
+    [autoCompleteMode]="autoCompleteMode" (inputUpdated)="filter($event)">
+  </app-search-bar>
+
+  <app-leagues-list [leagues]="leagues" [searchText]="searchText"></app-leagues-list>
 
   <div *ngIf="!leagues && callCompleted">
     <app-error-message message="No results"></app-error-message>
