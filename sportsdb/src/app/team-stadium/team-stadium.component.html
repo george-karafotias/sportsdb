@@ -1,0 +1,18 @@
+<div *ngIf="team.strStadiumDescription && team.strStadiumLocation && team.intStadiumCapacity">
+  <h3>Stadium</h3>
+  <table>
+    <tbody>
+      <tr>
+        <td>Name: {{team.strStadium}}</td>
+      </tr>
+      <tr>
+        <td>Location: {{team.strStadiumLocation}}</td>
+      </tr>
+      <tr>
+        <td>Capacity: {{team.intStadiumCapacity}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <img class="team-stadium-image" *ngIf="team.strStadiumThumb" src='{{team.strStadiumThumb}}' />
+  <p>{{team.strStadiumDescription}}</p>
+</div>
