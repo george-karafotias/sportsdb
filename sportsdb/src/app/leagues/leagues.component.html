@@ -4,7 +4,7 @@
 
   <app-leagues-list [leagues]="leagues"></app-leagues-list>
 
-  <div *ngIf="!Leagues && callCompleted">
+  <div *ngIf="!leagues && callCompleted">
     <app-error-message message="No results"></app-error-message>
   </div>
 
