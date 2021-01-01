@@ -22,7 +22,6 @@ import { TeamComponent } from './team/team.component';
 import { TeamInfoComponent } from './team-info/team-info.component';
 import { ImageButtonComponent } from './image-button/image-button.component';
 import { TeamStadiumComponent } from './team-stadium/team-stadium.component';
-import { TeamSocialMediaComponent } from './team-social-media/team-social-media.component';
 import { LeaguesComponent } from './leagues/leagues.component';
 import { LeaguesListComponent } from './leagues-list/leagues-list.component';
 import { TableFilterPipe } from './filters/table-filter.pipe';
@@ -31,6 +30,9 @@ import { LeagueEventsComponent } from './league-events/league-events.component';
 import { EventsListComponent } from './events-list/events-list.component';
 import { LeagueResultsComponent } from './league-results/league-results.component';
 import { NoResultsErrorComponent } from './no-results-error/no-results-error.component';
+import { LeagueComponent } from './league/league.component';
+import { LeagueInfoComponent } from './league-info/league-info.component';
+import { SocialMediaInfoComponent } from './social-media-info/social-media-info.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -38,6 +40,7 @@ const routes: Routes = [
   { path: 'player/:id', component: PlayerComponent },
   { path: 'teams', component: TeamsComponent },
   { path: 'team/:id', component: TeamComponent },
+  { path: 'league/:id', component: LeagueComponent },
   { path: 'leagues', component: LeaguesComponent },
   { path: 'league-teams/:id/:name', component: LeagueTeamsComponent },
   { path: 'league-events/:id/:name', component: LeagueEventsComponent },
@@ -64,7 +67,6 @@ const routes: Routes = [
     TeamInfoComponent,
     ImageButtonComponent,
     TeamStadiumComponent,
-    TeamSocialMediaComponent,
     LeaguesComponent,
     LeaguesListComponent,
     TableFilterPipe,
@@ -72,7 +74,10 @@ const routes: Routes = [
     LeagueEventsComponent,
     EventsListComponent,
     LeagueResultsComponent,
-    NoResultsErrorComponent
+    NoResultsErrorComponent,
+    LeagueComponent,
+    LeagueInfoComponent,
+    SocialMediaInfoComponent
   ],
   imports: [
     BrowserModule,

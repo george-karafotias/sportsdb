@@ -1,0 +1,28 @@
+<div *ngIf="league">
+  <table style="overflow-x:auto;">
+    <tr>
+      <td>League: {{league.strLeague}}</td>
+    </tr>
+    <tr>
+      <td>Formed Year: {{league.intFormedYear}}</td>
+    </tr>
+    <tr>
+      <td>Sport: {{league.strSport}}</td>
+    </tr>
+    <tr>
+      <td>Country: {{league.strCountry}}</td>
+    </tr>
+    <tr>
+      <td>Gender: {{league.strGender}}</td>
+    </tr>
+    <tr>
+      <td>Current Season: {{league.strCurrentSeason}}</td>
+    </tr>
+    <tr>
+      <td>Division: {{league.strDivision}}</td>
+    </tr>
+    <tr *ngIf="league.strWebsite">
+      <td><a [attr.href]="'http://' + league.strWebsite" target="_blank">Website</a></td>
+    </tr>
+  </table>
+</div>

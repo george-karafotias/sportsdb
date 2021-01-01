@@ -1,0 +1,31 @@
+<div *ngIf="league" class="two-col-container">
+
+  <h2>{{league.strLeague}}</h2>
+
+  <div *ngIf="league.strBadge" class="two-col-header">
+
+    <div class="two-col-image">
+      <img src='{{league.strBadge}}'>
+    </div>
+
+    <div class="two-col-info">
+      <app-league-info [league]="league"></app-league-info>
+    </div>
+
+  </div>
+
+  <div *ngIf="!league.strBadge">
+    <app-league-info [league]="league"></app-league-info>
+  </div>
+
+  <p>{{league.strDescriptionEN}}</p>
+
+  <app-social-media-info [entity]="league"></app-social-media-info>
+
+</div>
+
+<app-please-wait *ngIf="callInProgress"></app-please-wait>
+
+<div *ngIf="!callInProgress">
+  <app-error-message [message]="errorMessage"></app-error-message>
+</div>

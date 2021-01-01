@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TeamSocialMediaComponent } from './team-social-media.component';
+import { LeagueComponent } from './league.component';
 
-describe('TeamSocialMediaComponent', () => {
-  let component: TeamSocialMediaComponent;
-  let fixture: ComponentFixture<TeamSocialMediaComponent>;
+describe('LeagueComponent', () => {
+  let component: LeagueComponent;
+  let fixture: ComponentFixture<LeagueComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TeamSocialMediaComponent ]
+      declarations: [ LeagueComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TeamSocialMediaComponent);
+    fixture = TestBed.createComponent(LeagueComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,0 +1,17 @@
+<div *ngIf="isSocialMediaAvailable()">
+  <h3>Social Media</h3>
+  <table>
+    <tr *ngIf="entity.strFacebook">
+      <td><a [attr.href]="'http://' + entity.strFacebook" target="_blank">Facebook</a></td>
+    </tr>
+    <tr *ngIf="entity.strInstagram">
+      <td><a [attr.href]="'http://' + entity.strInstagram" target="_blank">Instagram</a></td>
+    </tr>
+    <tr *ngIf="entity.strTwitter">
+      <td><a [attr.href]="'http://' + entity.strTwitter" target="_blank">Twitter</a></td>
+    </tr>
+    <tr *ngIf="entity.strYoutube">
+      <td><a [attr.href]="'http://' + entity.strYoutube" target="_blank">Youtube</a></td>
+    </tr>
+  </table>
+</div>
