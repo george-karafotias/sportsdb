@@ -5,8 +5,9 @@
       <tr>
         <th>League</th>
         <th>Sport</th>
-        <th></th>
-        <th></th>
+        <th>Teams</th>
+        <th>Results</th>
+        <th>Next Events</th>
       </tr>
     </thead>
     <tbody>
@@ -14,6 +15,7 @@
         <td>{{league.strLeague}}</td>
         <td>{{league.strSport}}</td>
         <td><a routerLink="/league-teams/{{league.idLeague}}/{{league.strLeague}}">View Teams</a></td>
+        <td><a routerLink="/league-results/{{league.idLeague}}/{{league.strLeague}}">View Results</a></td>
         <td><a routerLink="/league-events/{{league.idLeague}}/{{league.strLeague}}">View Next Events</a></td>
       </tr>
     </tbody>

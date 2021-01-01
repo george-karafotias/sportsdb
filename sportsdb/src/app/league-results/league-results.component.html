@@ -1,0 +1,15 @@
+<h2>{{name}} Last Events</h2>
+
+<div *ngIf="!callInProgress">
+
+  <app-events-list [events]="events"></app-events-list>
+
+  <div *ngIf="!events && callCompleted">
+    <app-error-message message="No results"></app-error-message>
+  </div>
+
+</div>
+
+<app-please-wait *ngIf="callInProgress"></app-please-wait>
+
+<app-error-message [message]="errorMessage"></app-error-message>

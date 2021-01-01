@@ -9,12 +9,26 @@ export class EventsListComponent implements OnInit {
 
   @Input() events: any[];
 
+  atLeastOneResult: boolean = false;
+
   constructor() { }
 
   ngOnInit() {
+    this.atLeastOneResult = this.atLeastOneEventHappened();
   }
 
-  eventHappened(event: any): boolean {
+  private atLeastOneEventHappened(): boolean {
+    if (this.events) {
+      for (let i = 0; i < this.events.length; i++) {
+        if (this.eventHappened(this.events[i])) {
+          return true;
+        }
+      }
+    }
+    return false;
+  }
+
+  private eventHappened(event: any): boolean {
     let homeScore: string = '';
     let awayScore: string = '';
     if (event.intHomeScore) homeScore = event.intHomeScore.toString();
