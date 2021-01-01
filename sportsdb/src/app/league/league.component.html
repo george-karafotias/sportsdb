@@ -22,6 +22,21 @@
 
   <app-social-media-info [entity]="league"></app-social-media-info>
 
+  <div *ngIf="teams">
+    <h3>League Teams</h3>
+    <app-teams-list [teams]="teams"></app-teams-list>
+  </div>
+
+  <div *ngIf="results">
+    <h3>League Last Results</h3>
+    <app-events-list [events]="events"></app-events-list>
+  </div>
+
+  <div *ngIf="events">
+    <h3>League Next Events</h3>
+    <app-events-list [events]="events"></app-events-list>
+  </div>
+
 </div>
 
 <app-please-wait *ngIf="callInProgress"></app-please-wait>
