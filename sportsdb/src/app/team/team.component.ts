@@ -31,11 +31,9 @@ export class TeamComponent implements OnInit {
       .subscribe({
         next: data => {
           this.team = data.teams[0];
-          this.callInProgress = false;
           this.getTeamLastEvents(teamId);
         },
         error: error => {
-          this.callInProgress = false;
           this.errorMessage = error.message;
           console.error('There was an error!', error);
         }
@@ -50,6 +48,7 @@ export class TeamComponent implements OnInit {
           this.getTeamNextEvents(teamId);
         },
         error: error => {
+          this.callInProgress = false;
           console.error('There was an error!', error);
         }
       })
@@ -60,8 +59,10 @@ export class TeamComponent implements OnInit {
       .subscribe({
         next: data => {
           this.teamNextEvents = data.events;
+          this.callInProgress = false;
         },
         error: error => {
+          this.callInProgress = false;
           console.error('There was an error!', error);
         }
       })
