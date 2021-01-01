@@ -20,6 +20,16 @@
 
   <p>{{team.strDescriptionEN}}</p>
 
+  <div *ngIf="teamLastEvents">
+    <h3>Last Results</h3>
+    <app-events-list [events]="teamLastEvents"></app-events-list>
+  </div>
+
+  <div *ngIf="teamNextEvents">
+    <h3>Next Events</h3>
+    <app-events-list [events]="teamNextEvents"></app-events-list>
+  </div>
+
   <app-team-stadium [team]="team"></app-team-stadium>
 
   <app-team-social-media [team]="team"></app-team-social-media>

@@ -11,6 +11,8 @@ export class TeamComponent implements OnInit {
 
   id: string;
   team: any;
+  teamLastEvents: any[];
+  teamNextEvents: any[];
   errorMessage: string;
   callInProgress: boolean = false;
 
@@ -30,6 +32,7 @@ export class TeamComponent implements OnInit {
         next: data => {
           this.team = data.teams[0];
           this.callInProgress = false;
+          this.getTeamLastEvents(teamId);
         },
         error: error => {
           this.callInProgress = false;
@@ -38,4 +41,30 @@ export class TeamComponent implements OnInit {
         }
       })
   }
+
+  getTeamLastEvents(teamId: string) {
+    this.teamService.getTeamLastEvents(teamId)
+      .subscribe({
+        next: data => {
+          this.teamLastEvents = data.results;
+          this.getTeamNextEvents(teamId);
+        },
+        error: error => {
+          console.error('There was an error!', error);
+        }
+      })
+  }
+
+  getTeamNextEvents(teamId: string) {
+    this.teamService.getTeamNextEvents(teamId)
+      .subscribe({
+        next: data => {
+          this.teamNextEvents = data.events;
+        },
+        error: error => {
+          console.error('There was an error!', error);
+        }
+      })
+  }
+
 }
