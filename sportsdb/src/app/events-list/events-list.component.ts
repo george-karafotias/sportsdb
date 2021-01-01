@@ -14,4 +14,12 @@ export class EventsListComponent implements OnInit {
   ngOnInit() {
   }
 
+  eventHappened(event: any): boolean {
+    let homeScore: string = '';
+    let awayScore: string = '';
+    if (event.intHomeScore) homeScore = event.intHomeScore.toString();
+    if (event.intAwayScore) awayScore = event.intAwayScore.toString();
+    return (homeScore && homeScore.length > 0 && awayScore && awayScore.length > 0);
+  }
+
 }

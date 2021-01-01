@@ -14,7 +14,9 @@
     </thead>
     <tbody>
       <tr *ngFor="let event of events">
-        <td>{{event.strEvent}}</td>
+        <td *ngIf="eventHappened(event)">{{event.strHomeTeam}} - {{event.strAwayTeam}} {{event.intHomeScore}} -
+          {{event.intAwayScore}}</td>
+        <td *ngIf="!eventHappened(event)">{{event.strEvent}}</td>
         <td>{{event.strHomeTeam}}</td>
         <td>{{event.strAwayTeam}}</td>
         <td>{{event.dateEvent}}</td>

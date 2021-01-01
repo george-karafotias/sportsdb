@@ -14,6 +14,7 @@ export class LeagueEventsComponent implements OnInit {
   events: any;
   errorMessage: string;
   callInProgress: boolean = false;
+  callCompleted: boolean = false;
 
   constructor(private route: ActivatedRoute, private leagueEventsService: LeagueEventsService) { }
 
@@ -27,15 +28,18 @@ export class LeagueEventsComponent implements OnInit {
   getLeagueEvents() {
     this.errorMessage = '';
     this.callInProgress = true;
+    this.callCompleted = false;
 
     this.leagueEventsService.getLeagueEvents(this.id)
       .subscribe({
         next: data => {
           this.events = data.events;
           this.callInProgress = false;
+          this.callCompleted = true;
         },
         error: error => {
           this.callInProgress = false;
+          this.callCompleted = true;
           this.errorMessage = error.message;
           console.error('There was an error!', error);
         }
