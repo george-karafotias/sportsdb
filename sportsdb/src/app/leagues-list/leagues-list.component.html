@@ -14,9 +14,9 @@
       <tr *ngFor="let league of leagues | tableFilter:searchText:'strLeague'">
         <td>{{league.strLeague}}</td>
         <td>{{league.strSport}}</td>
-        <td><a routerLink="/league-teams/{{league.idLeague}}/{{league.strLeague}}">View Teams</a></td>
-        <td><a routerLink="/league-results/{{league.idLeague}}/{{league.strLeague}}">View Results</a></td>
-        <td><a routerLink="/league-events/{{league.idLeague}}/{{league.strLeague}}">View Next Events</a></td>
+        <td><a routerLink="/league-teams/{{league.idLeague}}/{{league.strLeague}}">Teams</a></td>
+        <td><a routerLink="/league-results/{{league.idLeague}}/{{league.strLeague}}">Results</a></td>
+        <td><a routerLink="/league-events/{{league.idLeague}}/{{league.strLeague}}">Next Events</a></td>
       </tr>
     </tbody>
   </table>
