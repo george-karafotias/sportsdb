@@ -27,6 +27,8 @@ import { LeaguesComponent } from './leagues/leagues.component';
 import { LeaguesListComponent } from './leagues-list/leagues-list.component';
 import { TableFilterPipe } from './filters/table-filter.pipe';
 import { LeagueTeamsComponent } from './league-teams/league-teams.component';
+import { LeagueEventsComponent } from './league-events/league-events.component';
+import { EventsListComponent } from './events-list/events-list.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -36,6 +38,7 @@ const routes: Routes = [
   { path: 'team/:id', component: TeamComponent },
   { path: 'leagues', component: LeaguesComponent },
   { path: 'league-teams/:id/:name', component: LeagueTeamsComponent },
+  { path: 'league-events/:id/:name', component: LeagueEventsComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
 ]
 
@@ -62,7 +65,9 @@ const routes: Routes = [
     LeaguesComponent,
     LeaguesListComponent,
     TableFilterPipe,
-    LeagueTeamsComponent
+    LeagueTeamsComponent,
+    LeagueEventsComponent,
+    EventsListComponent
   ],
   imports: [
     BrowserModule,

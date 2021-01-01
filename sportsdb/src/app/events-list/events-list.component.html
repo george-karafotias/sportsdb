@@ -1,0 +1,28 @@
+<div *ngIf="events" style="overflow-x:auto;">
+
+  <table>
+    <thead>
+      <tr>
+        <th>Event</th>
+        <th>Home</th>
+        <th>Away</th>
+        <th>Date</th>
+        <th>Time</th>
+        <th>Venue</th>
+        <th>Season</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let event of events">
+        <td>{{event.strEvent}}</td>
+        <td>{{event.strHomeTeam}}</td>
+        <td>{{event.strAwayTeam}}</td>
+        <td>{{event.dateEvent}}</td>
+        <td>{{event.strTime}}</td>
+        <td>{{event.strVenue}}</td>
+        <td>{{event.strSeason}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
