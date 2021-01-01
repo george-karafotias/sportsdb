@@ -15,7 +15,7 @@ export class SearchStorageService {
   constructor() { }
 
   reset() {
-    this.lastLeagueSearchText = '';
+    this.lastPlayerSearchText = '';
     this.lastPlayerResults = undefined;
     this.lastTeamSearchText = '';
     this.lastTeamResults = undefined;
