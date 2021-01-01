@@ -7,7 +7,7 @@
   <app-teams-list [teams]="teams"></app-teams-list>
 
   <div *ngIf="!teams && callCompleted">
-    <app-error-message message="No results"></app-error-message>
+    <app-no-results-error></app-no-results-error>
   </div>
 
 </div>

@@ -30,6 +30,7 @@ import { LeagueTeamsComponent } from './league-teams/league-teams.component';
 import { LeagueEventsComponent } from './league-events/league-events.component';
 import { EventsListComponent } from './events-list/events-list.component';
 import { LeagueResultsComponent } from './league-results/league-results.component';
+import { NoResultsErrorComponent } from './no-results-error/no-results-error.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -70,7 +71,8 @@ const routes: Routes = [
     LeagueTeamsComponent,
     LeagueEventsComponent,
     EventsListComponent,
-    LeagueResultsComponent
+    LeagueResultsComponent,
+    NoResultsErrorComponent
   ],
   imports: [
     BrowserModule,

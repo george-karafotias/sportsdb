@@ -9,7 +9,7 @@
   <app-leagues-list [leagues]="leagues" [searchText]="searchText"></app-leagues-list>
 
   <div *ngIf="!leagues && callCompleted">
-    <app-error-message message="No results"></app-error-message>
+    <app-no-results-error></app-no-results-error>
   </div>
 
 </div>

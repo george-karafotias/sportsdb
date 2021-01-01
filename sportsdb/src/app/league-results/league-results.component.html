@@ -5,7 +5,7 @@
   <app-events-list [events]="events"></app-events-list>
 
   <div *ngIf="!events && callCompleted">
-    <app-error-message message="No results"></app-error-message>
+    <app-no-results-error></app-no-results-error>
   </div>
 
 </div>
