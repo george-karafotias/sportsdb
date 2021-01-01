@@ -18,16 +18,16 @@ export class PlayersComponent implements OnInit {
   constructor(private playersService: PlayersService, private searchStorageService: SearchStorageService) { }
 
   ngOnInit() {
-    this.searchText = this.searchStorageService.searchText;
-    this.players = this.searchStorageService.searchResults;
+    this.searchText = this.searchStorageService.lastPlayerSearchText;
+    this.players = this.searchStorageService.lastPlayerResults;
   }
 
   getPlayers(playerName: string) {
     this.errorMessage = '';
     this.callInProgress = true;
     this.callCompleted = false;
-    this.searchStorageService.searchText = playerName;
-    this.searchText = this.searchStorageService.searchText;
+    this.searchStorageService.lastPlayerSearchText = playerName;
+    this.searchText = this.searchStorageService.lastPlayerSearchText;
 
     this.playersService.getPlayers(playerName)
       .subscribe({
@@ -35,7 +35,7 @@ export class PlayersComponent implements OnInit {
           this.players = data.player;
           this.callInProgress = false;
           this.callCompleted = true;
-          this.searchStorageService.searchResults = this.players;
+          this.searchStorageService.lastPlayerResults = this.players;
         },
         error: error => {
           this.callInProgress = false;

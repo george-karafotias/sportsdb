@@ -19,7 +19,7 @@ export class LeaguesComponent implements OnInit {
   constructor(private leaguesService: LeaguesService, private searchStorageService: SearchStorageService) { }
 
   ngOnInit() {
-    this.searchText = this.searchStorageService.searchText;
+    this.searchText = this.searchStorageService.lastLeagueSearchText;
     this.getLeagues();
   }
 
@@ -27,7 +27,7 @@ export class LeaguesComponent implements OnInit {
     this.errorMessage = '';
     this.callInProgress = true;
     this.callCompleted = false;
-    this.searchStorageService.searchText = this.searchText;
+    this.searchStorageService.lastLeagueSearchText = this.searchText;
 
     this.leaguesService.getLeagues()
       .subscribe({
@@ -46,7 +46,7 @@ export class LeaguesComponent implements OnInit {
 
   filter(str: string) {
     this.searchText = str;
-    this.searchStorageService.searchText = this.searchText;
+    this.searchStorageService.lastLeagueSearchText = this.searchText;
   }
 
 }

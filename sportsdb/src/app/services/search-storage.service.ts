@@ -5,8 +5,21 @@ import { Injectable } from '@angular/core';
 })
 export class SearchStorageService {
 
-  searchText: string = '';
-  searchResults: any[];
+  lastPlayerSearchText: string = '';
+  lastPlayerResults: any[];
+  lastTeamSearchText: string = '';
+  lastTeamResults: any[];
+  lastLeagueSearchText: string = '';
+  lastLeagueResults: any[];
 
   constructor() { }
+
+  reset() {
+    this.lastLeagueSearchText = '';
+    this.lastPlayerResults = undefined;
+    this.lastTeamSearchText = '';
+    this.lastTeamResults = undefined;
+    this.lastLeagueSearchText = '';
+    this.lastLeagueResults = undefined;
+  }
 }

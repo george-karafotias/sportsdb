@@ -10,8 +10,7 @@ export class NavigationService {
   constructor(private router: Router, private searchStorageService: SearchStorageService) { }
 
   goToRoute(route: string) {
-    this.searchStorageService.searchText = '';
-    this.searchStorageService.searchResults = undefined;
+    this.searchStorageService.reset();
     this.router.navigate(['/' + route]);
   }
 }
